@@ -17,4 +17,5 @@ CMS for mcgreggor.net
 ## Notes
 
 1. Use Yeoman to scaffold the project
-2. Mongodb must be installed and running 
+2. Mongodb must be installed and running
+3. Queries based on Mongoose api structure
