@@ -1,0 +1,23 @@
+version: "2"
+services:
+  # NodeJS app
+  web:
+    container_name: webcms
+    build: .
+    ports:
+    - 3000:3000
+    depends_on:
+    - mongo
+    environment:
+    - MONGO_URI=mongodb://mongo:27017
+
+  # MongoDB
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db/mongo
+    ports:
+      - 27017:27017
+
+   # TODO: Check persistence
